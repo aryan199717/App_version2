@@ -20,6 +20,7 @@ export class IntroPage implements OnInit {
   }
 
   slideOpts = {
+    autoplay: true,
     on: {
       beforeInit() {
         const swiper = this;

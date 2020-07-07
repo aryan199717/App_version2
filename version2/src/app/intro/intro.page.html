@@ -11,36 +11,50 @@
     >
       <ion-slide class="intro">
         <img src="../../assets/intro1.svg" />
-        <p>Connect with your team.</p>
+        <p>
+          Connect with your team.
+        </p>
+        <small
+          >Enhances your integrity with your team members. Helps you achieve
+          your goals.</small
+        >
       </ion-slide>
       <ion-slide class="intro">
         <img src="../../assets/intro2.svg" />
         <p>Engage with work.</p>
+        <small
+          >Better engagement with your work. Increases your and your team
+          effeciency.</small
+        >
       </ion-slide>
       <ion-slide class="intro">
         <img src="../../assets/intro3.svg" />
         <p>Recognize your team.</p>
+        <small>Know your team. Share thoughts and feelings.</small>
       </ion-slide>
     </ion-slides>
-    <div class="btns">
-      <ion-button
-        color="primary"
-        class="buttons"
-        expand="full"
-        shape="round"
-        (click)="gotoLogin()"
-        >Login</ion-button
-      >
-
-      <ion-button
-        color="primary"
-        class="buttons"
-        expand="full"
-        shape="round"
-        fill="outline"
-        (click)="gotoRegister()"
-        >Register</ion-button
-      >
-    </div>
+    <ion-grid>
+      <ion-row>
+        <ion-button
+          color="primary"
+          class="buttons"
+          expand="full"
+          shape="round"
+          (click)="gotoLogin()"
+          >Login</ion-button
+        >
+      </ion-row>
+      <ion-row>
+        <ion-button
+          color="secondary"
+          class="buttons"
+          expand="full"
+          shape="round"
+          fill="outline"
+          (click)="gotoRegister()"
+          >Register</ion-button
+        >
+      </ion-row>
+    </ion-grid>
   </div>
 </ion-content>
