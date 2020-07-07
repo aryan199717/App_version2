@@ -1,9 +1,45 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>intro</ion-title>
-  </ion-toolbar>
+  <ion-nav></ion-nav>
 </ion-header>
-
 <ion-content>
+  <div class="center">
+    <ion-slides
+      #slider
+      pager="true"
+      [options]="slideOpts"
+      (ionSlideDidChange)="ionSlideChange(slides)"
+    >
+      <ion-slide class="intro">
+        <img src="../../assets/1.svg" />
+        <p>Connect with your team.</p>
+      </ion-slide>
+      <ion-slide class="intro">
+        <img src="../../assets/2.svg" />
+        <p>Engage with work.</p>
+      </ion-slide>
+      <ion-slide class="intro">
+        <img src="../../assets/shapes.svg" />
+        <p>Recognize your team.</p>
+      </ion-slide>
+    </ion-slides>
+    <div class="btns">
+      <ion-button
+        color="primary"
+        class="buttons"
+        expand="full"
+        shape="round"
+        (click)="gotoLogin()"
+        >Login</ion-button
+      >
 
+      <ion-button
+        color="primary"
+        class="buttons"
+        expand="full"
+        shape="round"
+        (click)="gotoRegister()"
+        >Register</ion-button
+      >
+    </div>
+  </div>
 </ion-content>
