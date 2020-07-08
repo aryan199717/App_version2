@@ -73,47 +73,6 @@
                         class="eye"
                         [name]="passwordToggleIcon"
                         (click)="togglePassword()"
-<<<<<<< HEAD
-                      ></ion-icon>
-                    </label>
-                  </div>
-                  <div>
-                    <ng-container *ngFor="let error of error_message.password">
-                      <div
-                        class="error-message"
-                        *ngIf="Login.get('password').hasError(error.type) && (Login.get('password').dirty || Login.get('password').touched)"
-                      >
-                        <ion-icon name="information-circle-outline"></ion-icon>
-                        {{ error.message }}
-                      </div>
-                    </ng-container>
-                  </div>
-
-                  <a
-                    [routerLink]="['/ForgotPassword']"
-                    class="txt2"
-                    href="#"
-                    style="margin-left: 60%; color: #e69600;"
-                  >
-                    Forgot Password?
-                  </a>
-                  <div class="container-login100-form-btn">
-                    <div class="wrap-login100-form-btn">
-                      <div class="login100-form-bgbtn"></div>
-                      <ion-button
-                        (click)="gotoHome()"
-                        class="login100-form-btn"
-                        type="submit"
-                      >
-                        <a style="color: white; margin: center;">Login</a>
-                      </ion-button>
-                    </div>
-                  </div>
-                  <div class="text-center">
-                    <span
-                      class="txt1"
-                      style="color: black; font-family: roboto;"
-=======
                       ></ion-icon
                     ></ion-col>
                   </ion-row>
@@ -134,7 +93,6 @@
                           </div>
                         </ng-container>
                       </div></ion-col
->>>>>>> ca104ad1bc0b48307bd41b91704902b655b69a27
                     >
                     <ion-col
                       size="5"
@@ -166,38 +124,10 @@
                   >
                 </ion-grid>
               </div>
-<<<<<<< HEAD
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div id="dropDownSelect1"></div>
-    <!--===============================================================================================-->
-    <script href="vendor/jquery/jquery-3.2.1.min.js"></script>
-    <!--===============================================================================================-->
-    <script href="vendor/animsition/js/animsition.min.js"></script>
-    <!--===============================================================================================-->
-    <script href="vendor/bootstrap/js/popper.js"></script>
-    <script href="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <!--===============================================================================================-->
-    <script href="vendor/select2/select2.min.js"></script>
-    <!--===============================================================================================-->
-    <script href="vendor/daterangepicker/moment.min.js"></script>
-    <script href="vendor/daterangepicker/daterangepicker.js"></script>
-    <!--===============================================================================================-->
-    <script href="vendor/countdowntime/countdowntime.js"></script>
-    <!--===============================================================================================-->
-    <script href="js/main.js"></script>
-  </div>
-  >>>>>>> 6a136bb97ad0645c1ef902f3fa5b8ef6e4345436
-=======
             </ion-row>
           </ion-grid>
         </form>
       </ion-card>
     </ion-row>
   </ion-grid>
->>>>>>> ca104ad1bc0b48307bd41b91704902b655b69a27
 </ion-content>
