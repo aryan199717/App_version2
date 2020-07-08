@@ -1,86 +1,79 @@
 <ion-header>
-  <ion-toolbar class="tool">
-    <ion-buttons slot="start" name="back">
-      <ion-back-button></ion-back-button>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="Log In" icon="chevron-back-outline">
+      </ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div id="container">
-    <div class="limiter">
-      <div class="container-login100">
-        <table>
-          <tbody>
-            <tr>
-              <p
-                style="
-                  color: white;
-                  font-size: small;
-                  font-weight: lighter;
-                  margin-left: -95%;
-                  font-family: roboto;
-                "
-              >
-                Hello there!
-              </p>
-            </tr>
-
-            <<<<<<< HEAD =======
-            <tr>
-              <p
-                style="
-                  color: white;
-                  font-size: large;
-                  font-weight: bolder;
-                  margin-left: -70%;
-                  margin-bottom: -50px;
-                  font-family: roboto;
-                "
-              >
-                Welcome to Howdy
-              </p>
-            </tr>
-
-            <tr>
-              <div class="wrap-login100">
-                <form [formGroup]="Login">
-                  <div data-validate="Valid email is: a@b.c">
-                    <label class="pure-material-textfield-outlined">
-                      <input type="text" formControlName="email" />
-                      <span>Email Id</span>
-                    </label>
+  <ion-grid class="padding">
+    <ion-row style="height: 10px;"></ion-row>
+    <ion-row class="no-padding">
+      Hello there!
+    </ion-row>
+    <ion-row class="ion-text-xl">
+      Welcome to Howdy
+    </ion-row>
+    <ion-row class="wrap">
+      <ion-card class="ion-padding">
+        <form [formGroup]="Login" class="form">
+          <ion-grid>
+            <ion-row style="height: 40px;"></ion-row>
+            <ion-row>
+              <div class="input">
+                <ion-grid>
+                  <ion-row>
+                    <ion-label class="inline">Email ID</ion-label>
+                  </ion-row>
+                  <ion-row>
+                    <ion-input
+                      class="adj_input"
+                      formControlName="email"
+                      placeholder="Email"
+                    ></ion-input>
+                  </ion-row>
+                </ion-grid>
+              </div>
+            </ion-row>
+            <ion-row
+              ><div>
+                <ng-container *ngFor="let error of error_message.email">
+                  <div
+                    class="error-message"
+                    *ngIf="Login.get('email').hasError(error.type) && (Login.get('email').dirty || Login.get('email').touched)"
+                  >
+                    <ion-icon name="information-circle-outline"></ion-icon>
+                    {{ error.message }}
                   </div>
-                  <div>
-                    <ng-container *ngFor="let error of error_message.email">
-                      <div
-                        class="error-message"
-                        *ngIf="Login.get('email').hasError(error.type) && (Login.get('email').dirty || Login.get('email').touched)"
-                      >
-                        <ion-icon name="information-circle-outline"></ion-icon>
-                        {{ error.message }}
-                      </div>
-                    </ng-container>
-                  </div>
-
-                  <span class="btn-show-pass">
-                    <i class="zmdi zmdi-eye"></i>
-                  </span>
-                  <div data-validate="Valid email is: a@b.c">
-                    <label class="pure-material-textfield-outlined">
-                      <input
-                        type="text"
-                        formControlName="email"
+                </ng-container>
+              </div></ion-row
+            >
+            <ion-row style="height: 40px;"></ion-row>
+            <ion-row>
+              <div class="input">
+                <ion-grid>
+                  <ion-row>
+                    <ion-label class="inline">Password</ion-label>
+                  </ion-row>
+                  <ion-row>
+                    <ion-col>
+                      <ion-input
                         formControlName="password"
                         [type]="showPassword ? 'text' :'password'"
-                      />
-
-                      <span>Password</span>
-
-                      <ion-icon
+                        class="adj_input_p"
+                        placeholder="Password"
+                      ></ion-input>
+                    </ion-col>
+                    <ion-col
+                      size="1"
+                      style="text-align: end; vertical-align: middle;"
+                      ><ion-icon
                         class="eye"
                         [name]="passwordToggleIcon"
                         (click)="togglePassword()"
+<<<<<<< HEAD
                       ></ion-icon>
                     </label>
                   </div>
@@ -120,21 +113,60 @@
                     <span
                       class="txt1"
                       style="color: black; font-family: roboto;"
+=======
+                      ></ion-icon
+                    ></ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <ion-col class="forget">
+                      <div>
+                        <ng-container
+                          *ngFor="let error of error_message.password"
+                        >
+                          <div
+                            class="error-message"
+                            *ngIf="Login.get('password').hasError(error.type) && (Login.get('password').dirty || Login.get('password').touched)"
+                          >
+                            <ion-icon
+                              name="information-circle-outline"
+                            ></ion-icon>
+                            {{ error.message }}
+                          </div>
+                        </ng-container>
+                      </div></ion-col
+>>>>>>> ca104ad1bc0b48307bd41b91704902b655b69a27
                     >
-                      Don’t have an account?
-                    </span>
-
-                    <a
-                      [routerLink]="['/register']"
-                      class="txt2"
-                      href="#"
-                      style="font-family: roboto; color: #e69600;"
+                    <ion-col
+                      size="5"
+                      style="font-size: 11px; text-align: end; color: #e69600;"
                     >
-                      Register
-                    </a>
-                  </div>
-                </form>
+                      Forget Password?
+                    </ion-col>
+                  </ion-row>
+                  <ion-row style="height: 30px;"></ion-row>
+                  <ion-row
+                    ><ion-col size="12"
+                      ><ion-button
+                        size="large"
+                        expand="full"
+                        shape="round"
+                        class="logbtn"
+                        >Log In</ion-button
+                      ></ion-col
+                    ></ion-row
+                  >
+                  <ion-row style="height: 280px;"></ion-row>
+                  <ion-row>
+                    <ion-col
+                      class="ion-no-padding"
+                      size="8"
+                      style="font-size: 15px; text-align: right;"
+                      >Don't have an account?</ion-col
+                    ><a> Register</a></ion-row
+                  >
+                </ion-grid>
               </div>
+<<<<<<< HEAD
             </tr>
           </tbody>
         </table>
@@ -160,4 +192,12 @@
     <script href="js/main.js"></script>
   </div>
   >>>>>>> 6a136bb97ad0645c1ef902f3fa5b8ef6e4345436
+=======
+            </ion-row>
+          </ion-grid>
+        </form>
+      </ion-card>
+    </ion-row>
+  </ion-grid>
+>>>>>>> ca104ad1bc0b48307bd41b91704902b655b69a27
 </ion-content>
