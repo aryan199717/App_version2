@@ -107,14 +107,13 @@
                   <div class="container-login100-form-btn">
                     <div class="wrap-login100-form-btn">
                       <div class="login100-form-bgbtn"></div>
-                      <button
+                      <ion-button
+                        (click)="gotoHome()"
                         class="login100-form-btn"
-                        block
                         type="submit"
-                        [disabled]="!Login.valid"
                       >
                         <a style="color: white; margin: center;">Login</a>
-                      </button>
+                      </ion-button>
                     </div>
                   </div>
                   <div class="text-center">
