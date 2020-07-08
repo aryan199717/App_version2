@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import { Component, OnInit } from '@angular/core';
-
-
-
-=======
 import { Component, OnInit } from "@angular/core";
 import {
   Validators,
@@ -15,7 +9,6 @@ import {
   AbstractControl,
 } from "@angular/forms";
 import { NavController, NavParams } from "@ionic/angular";
->>>>>>> 6a136bb97ad0645c1ef902f3fa5b8ef6e4345436
 @Component({
   selector: "app-login",
   templateUrl: "./login.page.html",
@@ -62,7 +55,6 @@ export class LoginPage implements OnInit {
       ),
     });
   }
-  
 
   ngOnInit() {}
 }
