@@ -27,6 +27,26 @@ const routes: Routes = [
     loadChildren: () =>
       import("./dashboard/dashboard.module").then((m) => m.DashboardPageModule),
   },
+  {
+    path: "tabnav",
+    loadChildren: () =>
+      import("./tabnav/tabnav.module").then((m) => m.TabnavPageModule),
+  },
+  {
+    path: "teams",
+    loadChildren: () =>
+      import("./teams/teams.module").then((m) => m.TeamsPageModule),
+  },
+  {
+    path: "support",
+    loadChildren: () =>
+      import("./support/support.module").then((m) => m.SupportPageModule),
+  },
+  {
+    path: "account",
+    loadChildren: () =>
+      import("./account/account.module").then((m) => m.AccountPageModule),
+  },
 ];
 
 @NgModule({

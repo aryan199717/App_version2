@@ -111,7 +111,7 @@
                         class="login100-form-btn"
                         block
                         type="submit"
-                        [disabled]="!Login.valid"
+                        (click)="btnclicked()"
                       >
                         <a style="color: white; margin: center;">Login</a>
                       </button>

@@ -1,3 +1,4 @@
+import { RouterModule } from "@angular/router";
 import { Component, OnInit } from "@angular/core";
 import {
   Validators,
@@ -9,6 +10,7 @@ import {
   AbstractControl,
 } from "@angular/forms";
 import { NavController, NavParams } from "@ionic/angular";
+import { Router } from "@angular/router";
 @Component({
   selector: "app-login",
   templateUrl: "./login.page.html",
@@ -40,7 +42,7 @@ export class LoginPage implements OnInit {
       },
     ],
   };
-  constructor() {
+  constructor(public router: Router) {
     this.Login = new FormGroup({
       email: new FormControl(
         "",
@@ -54,6 +56,9 @@ export class LoginPage implements OnInit {
         Validators.compose([Validators.minLength(8), Validators.required])
       ),
     });
+  }
+  btnclicked() {
+    this.router.navigateByUrl("tabnav");
   }
 
   ngOnInit() {}
