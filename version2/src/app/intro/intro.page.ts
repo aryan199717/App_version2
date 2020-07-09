@@ -28,13 +28,5 @@ export class IntroPage implements OnInit {
 
   ionSlideChange(slides) {
     this.selectedSlide = slides;
-    // console.log(this.selectedSlide);
-    // slides.getIndex.((sliderIndex) => {
-    //   if (sliderIndex == 2) {
-    //     console.log("End is reached!!");
-    //   } else {
-    //     console.log("Abhi chal raha hai!!");
-    //   }
-    // });
   }
 }
