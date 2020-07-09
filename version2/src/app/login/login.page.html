@@ -7,63 +7,6 @@
   </ion-toolbar>
 </ion-header>
 
-<<<<<<< HEAD
-<ion-content [fullscreen]="true">
-  <div id="container">
-    <div class="limiter">
-      <div class="container-login100">
-        <table>
-          <tbody>
-            <tr>
-              <p
-                style="
-                  color: white;
-                  font-size: small;
-                  font-weight: lighter;
-                  margin-left: -95%;
-                  font-family: roboto;
-                "
-              >
-                Hello there!
-              </p>
-            </tr>
-
-            <<<<<<< HEAD =======
-            <tr>
-              <p
-                style="
-                  color: white;
-                  font-size: large;
-                  font-weight: bolder;
-                  margin-left: -70%;
-                  margin-bottom: -50px;
-                  font-family: roboto;
-                "
-              >
-                Welcome to Howdy
-              </p>
-            </tr>
-
-            <tr>
-              <div class="wrap-login100">
-                <form [formGroup]="Login">
-                  <div data-validate="Valid email is: a@b.c">
-                    <label class="pure-material-textfield-outlined">
-                      <input type="text" formControlName="email" />
-                      <span>Email Id</span>
-                    </label>
-                  </div>
-                  <div>
-                    <ng-container *ngFor="let error of error_message.email">
-                      <div
-                        class="error-message"
-                        *ngIf="Login.get('email').hasError(error.type) && (Login.get('email').dirty || Login.get('email').touched)"
-                      >
-                        <ion-icon name="information-circle-outline"></ion-icon>
-                        {{ error.message }}
-                      </div>
-                    </ng-container>
-=======
 <ion-content [fullscreen]="true" class="content">
   <ion-grid class="ion-padding">
     <ion-row style="height: 10px;"></ion-row>
@@ -74,9 +17,9 @@
       Welcome to Howdy
     </ion-row>
     <ion-row class="wrap">
-      <ion-card class="ion-padding">
+      <ion-card class="ion-padding" class="ion-margin-start">
         <form [formGroup]="Login" class="form">
-          <ion-grid>
+          <ion-grid class="ion-padding-start">
             <ion-row style="height: 40px;"></ion-row>
             <ion-row>
               <div class="input">
@@ -103,7 +46,6 @@
                   >
                     <ion-icon name="information-circle-outline"></ion-icon>
                     {{ error.message }}
->>>>>>> ba0793ff0ad71030c5cdec7166e6111232d6141d
                   </div>
                 </ng-container>
               </div></ion-row
@@ -131,48 +73,6 @@
                         class="eye"
                         [name]="passwordToggleIcon"
                         (click)="togglePassword()"
-<<<<<<< HEAD
-                      ></ion-icon>
-                    </label>
-                  </div>
-                  <div>
-                    <ng-container *ngFor="let error of error_message.password">
-                      <div
-                        class="error-message"
-                        *ngIf="Login.get('password').hasError(error.type) && (Login.get('password').dirty || Login.get('password').touched)"
-                      >
-                        <ion-icon name="information-circle-outline"></ion-icon>
-                        {{ error.message }}
-                      </div>
-                    </ng-container>
-                  </div>
-
-                  <a
-                    [routerLink]="['/ForgotPassword']"
-                    class="txt2"
-                    href="#"
-                    style="margin-left: 60%; color: #e69600;"
-                  >
-                    Forgot Password?
-                  </a>
-                  <div class="container-login100-form-btn">
-                    <div class="wrap-login100-form-btn">
-                      <div class="login100-form-bgbtn"></div>
-                      <button
-                        class="login100-form-btn"
-                        block
-                        type="submit"
-                        (click)="btnclicked()"
-                      >
-                        <a style="color: white; margin: center;">Login</a>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="text-center">
-                    <span
-                      class="txt1"
-                      style="color: black; font-family: roboto;"
-=======
                       ></ion-icon
                     ></ion-col>
                   </ion-row>
@@ -193,7 +93,6 @@
                           </div>
                         </ng-container>
                       </div></ion-col
->>>>>>> ba0793ff0ad71030c5cdec7166e6111232d6141d
                     >
                     <ion-col
                       size="5"
@@ -206,6 +105,7 @@
                   <ion-row
                     ><ion-col size="12"
                       ><ion-button
+                        (click)="btnclicked()"
                         size="large"
                         expand="full"
                         shape="round"
@@ -225,38 +125,10 @@
                   >
                 </ion-grid>
               </div>
-<<<<<<< HEAD
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div id="dropDownSelect1"></div>
-    <!--===============================================================================================-->
-    <script href="vendor/jquery/jquery-3.2.1.min.js"></script>
-    <!--===============================================================================================-->
-    <script href="vendor/animsition/js/animsition.min.js"></script>
-    <!--===============================================================================================-->
-    <script href="vendor/bootstrap/js/popper.js"></script>
-    <script href="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <!--===============================================================================================-->
-    <script href="vendor/select2/select2.min.js"></script>
-    <!--===============================================================================================-->
-    <script href="vendor/daterangepicker/moment.min.js"></script>
-    <script href="vendor/daterangepicker/daterangepicker.js"></script>
-    <!--===============================================================================================-->
-    <script href="vendor/countdowntime/countdowntime.js"></script>
-    <!--===============================================================================================-->
-    <script href="js/main.js"></script>
-  </div>
-  >>>>>>> 6a136bb97ad0645c1ef902f3fa5b8ef6e4345436
-=======
             </ion-row>
           </ion-grid>
         </form>
       </ion-card>
     </ion-row>
   </ion-grid>
->>>>>>> ba0793ff0ad71030c5cdec7166e6111232d6141d
 </ion-content>

@@ -1,7 +1,27 @@
 ion-title {
   color: white;
-  padding-top: 2px;
+  font-weight: medium;
+  letter-spacing: 1px;
+  padding-left: 0;
+  margin-left: 8px;
+  margin-bottom: 2px;
   margin-top: 4px;
+}
+.popover {
+  color: white;
+  padding: 0;
+  margin-bottom: 2px;
+  margin-left: 8px;
+  font-size: small;
+}
+.notif {
+  color: white;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end;
+}
+.ion-padding-end {
+  padding-right: 8px;
 }
 #title2 {
   font-size: 10px;
@@ -19,7 +39,6 @@ ion-title {
   padding-right: 20px;
 }
 #wellbeing {
-  margin-top: 10px;
   font-weight: bold;
   font-size: large;
 }
@@ -69,4 +88,8 @@ h3 {
 #dropdown {
   padding-left: 4px;
   font-size: medium;
+}
+.reaction {
+  font-size: 24px;
+  padding-right: 16px;
 }

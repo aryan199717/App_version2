@@ -18,7 +18,8 @@ ion-card {
 ion-row {
   padding: 0px;
 }
-.lablebox {
+.ion-padding-start {
+  padding-left: 24px;
 }
 .eye {
   margin-top: -10px;
@@ -51,6 +52,7 @@ ion-row {
   padding: 0px;
   font-size: 15px;
   font-weight: bolder;
+  margin-bottom: 2rem;
 }
 .inline {
   margin-top: -14px;
@@ -69,7 +71,7 @@ ion-row {
   color: white;
   padding: 0px;
   margin-left: 8px;
-  font-size: 10px;
+  font-size: 12px;
 }
 .wrap {
   padding-top: 20px;
@@ -78,4 +80,7 @@ ion-row {
 }
 .input-wrapper {
   margin-left: 80 px;
+}
+.ion-no-padding {
+  margin-left: 4px;
 }
