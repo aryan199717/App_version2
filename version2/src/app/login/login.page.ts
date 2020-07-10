@@ -42,11 +42,7 @@ export class LoginPage implements OnInit {
       },
     ],
   };
-<<<<<<< HEAD
-  constructor(public nav: NavController) {
-=======
-  constructor(public router: Router) {
->>>>>>> 84f979ca3d61fe26d9a1f4e14caae765d49b4597
+  constructor(public router: Router, private nav: NavController) {
     this.Login = new FormGroup({
       email: new FormControl(
         "",
