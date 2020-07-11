@@ -42,7 +42,7 @@ export class LoginPage implements OnInit {
       },
     ],
   };
-  constructor(public router: Router) {
+  constructor(public nav: NavController) {
     this.Login = new FormGroup({
       email: new FormControl(
         "",
@@ -57,8 +57,9 @@ export class LoginPage implements OnInit {
       ),
     });
   }
-  btnclicked() {
-    this.router.navigateByUrl("tabnav");
+
+  gotoHome() {
+    this.nav.navigateForward(["/home"]);
   }
 
   ngOnInit() {}
