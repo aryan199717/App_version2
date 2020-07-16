@@ -1,10 +1,10 @@
-<ion-header>
+<ion-header no-border>
   <ion-toolbar color="dark">
     <ion-grid fixed>
       <ion-row>
         <ion-col size="6">
           <ion-title>Howdy</ion-title>
-          <ion-select value="t1" interface="popover" class="popover">
+          <ion-select value="t1" class="popover" interface="popover">
             <ion-select-option value="t1"
               >Contact support team</ion-select-option
             >
@@ -14,17 +14,21 @@
           </ion-select>
         </ion-col>
         <ion-col size="6" class="notif">
-          <ion-icon
-            class="ion-padding-end"
-            size="large"
-            name="notifications"
-          ></ion-icon>
+          <ion-icon class="ion-padding-end" name="notifications"></ion-icon>
+          <ion-button
+            size="default"
+            fill="clear"
+            class="reset-button"
+            (click)="presentPopover($event)"
+          >
+            <ion-icon name="ellipsis-vertical"></ion-icon>
+          </ion-button>
         </ion-col>
       </ion-row>
     </ion-grid>
   </ion-toolbar>
 </ion-header>
-<ion-content>
+<!--<ion-content>
   <ion-tabs>
     <ion-tab-bar slot="bottom" color="dark">
       <ion-tab-button tab="dashboard">
@@ -49,3 +53,47 @@
     </ion-tab-bar>
   </ion-tabs>
 </ion-content>
+-->
+
+<super-tabs>
+  <super-tabs-container>
+    <super-tab>
+      <ion-content>
+        <ion-nav [root]="dashboardPage"></ion-nav>
+      </ion-content>
+    </super-tab>
+    <super-tab>
+      <ion-content>
+        <ion-nav [root]="teamsPage"></ion-nav>
+      </ion-content>
+    </super-tab>
+    <super-tab>
+      <ion-content>
+        <ion-nav [root]="supportPage"></ion-nav>
+      </ion-content>
+    </super-tab>
+    <super-tab>
+      <ion-content>
+        <ion-nav [root]="accountPage"></ion-nav>
+      </ion-content>
+    </super-tab>
+  </super-tabs-container>
+  <super-tabs-toolbar slot="bottom">
+    <super-tab-button>
+      <ion-icon name="home"></ion-icon>
+      <ion-label>Home</ion-label>
+    </super-tab-button>
+    <super-tab-button>
+      <ion-icon name="people"></ion-icon>
+      <ion-label>Teams</ion-label>
+    </super-tab-button>
+    <super-tab-button>
+      <ion-icon name="chatbubbles"></ion-icon>
+      <ion-label>Support</ion-label>
+    </super-tab-button>
+    <super-tab-button>
+      <ion-icon name="person-circle"></ion-icon>
+      <ion-label>Account</ion-label>
+    </super-tab-button>
+  </super-tabs-toolbar>
+</super-tabs>

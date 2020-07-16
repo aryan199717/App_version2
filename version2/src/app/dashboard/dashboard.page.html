@@ -1,3 +1,4 @@
+<!--
 <ion-content>
   <ion-item lines="none" id="wellbeing">
     <ion-label class="ion-no-margin">
@@ -47,11 +48,10 @@
     <ion-label class="ion-no-margin">
       Recognition
     </ion-label>
-    <ion-label class="ion-text-right" position="inline">
-      <p>
-        Swipe
-        <ion-icon name="arrow-forward-outline"></ion-icon>
-      </p>
+
+    <ion-label class="swipe">
+      SWIPE
+      <ion-icon name="arrow-forward-outline"></ion-icon>
     </ion-label>
   </ion-item>
   <ion-slides>
@@ -136,7 +136,15 @@
       Support (3)
     </ion-label>
     <ion-label class="ion-text-right">
-      <p>View all</p>
+      <p>
+        <ion-button
+          (click)="viewall()"
+          fill="clear"
+          size="small"
+          class="viewall"
+          >View all</ion-button
+        >
+      </p>
     </ion-label>
   </ion-item>
   <ion-card class="ion-no-padding" class="ion-margin-horizontal">
@@ -182,3 +190,4 @@
     </ion-card-content>
   </ion-card>
 </ion-content>
+-->

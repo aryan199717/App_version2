@@ -58,8 +58,8 @@ export class LoginPage implements OnInit {
     });
   }
 
-  gotoHome() {
-    this.nav.navigateForward(["/home"]);
+  btnclicked() {
+    this.nav.navigateForward(["/tabnav"]);
   }
 
   ngOnInit() {}

@@ -7,6 +7,7 @@ ion-title {
   margin-bottom: 2px;
   margin-top: 4px;
 }
+
 .popover {
   color: white;
   padding: 0;
@@ -27,11 +28,23 @@ ion-title {
   font-size: 10px;
   font-weight: lighter;
 }
+.swipe {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end;
+  font-size: 14px;
+  font-weight: medium;
+  color: var(--ion-color-step-600, #666666);
+}
 .ion-padding-start {
   color: white;
   padding-left: 20px;
   font-size: 12px;
   padding-top: 3px;
+  margin-bottom: 4px;
+}
+.ion-margin-horizontal {
+  margin-top: 4px;
   margin-bottom: 4px;
 }
 .ion-padding {
@@ -92,4 +105,11 @@ h3 {
 .reaction {
   font-size: 24px;
   padding-right: 16px;
+}
+.ion-margin-vertical {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.viewall {
+  --padding-end: 0;
 }

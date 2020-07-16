@@ -19,7 +19,25 @@ ion-title {
   display: flex !important;
   align-items: center !important;
   justify-content: flex-end;
+  font-size: 24px;
+}
+.reset-button {
+  --padding-end: 0;
+  --padding-start: 0;
 }
 .ion-padding-end {
   padding-right: 8px;
+}
+ion-icon {
+  color: white;
+}
+:host {
+  --super-tabs-toolbar-background: black;
+  --st-indicator-color: #e69600;
+  --st-base-color-active: #e69600;
+  --st-base-color-inactive: white;
+}
+ion-label {
+  font-size: 12px;
+  font-style: inherit;
 }
