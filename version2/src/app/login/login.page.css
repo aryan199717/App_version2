@@ -1,29 +1,35 @@
 ion-toolbar {
   --background: black;
 }
+
 ion-back-button {
   --background: black;
   --color: white;
 }
+
 ion-content {
   font-family: Roboto;
   --background: black;
   --overflow: hidden;
 }
+
 ion-card {
   width: 100%;
   --background: white;
   height: 75vh;
   border-radius: 15px;
 }
+
 ion-row {
   padding: 0px;
 }
+
 .eye {
   position: unset;
   margin-top: -15px;
   color: lightgrey;
 }
+
 .error-message {
   color: red;
   font-size: 10px;
@@ -31,23 +37,28 @@ ion-row {
   margin-top: 0px;
   word-wrap: break-word;
 }
+
 .adj_input {
   margin-top: -5px;
   padding-top: 10px;
 }
+
 .adj_input_l {
   padding-bottom: 12px;
   margin-top: -5px;
   padding-top: 10px;
 }
+
 .adj_input_p {
   margin-top: -10px;
   padding-top: 10px;
 }
+
 .logbtn {
   font-size: 14px;
   height: 40px;
 }
+
 .ion-text-xl {
   padding-top: 20px;
   color: white;
@@ -57,12 +68,14 @@ ion-row {
   font-size: 15px;
   font-weight: bolder;
 }
+
 .inline {
   margin-top: -14px;
   font-size: 11px;
   color: black;
   background: white;
 }
+
 .input {
   border-radius: 5px;
   margin-left: -10px;
@@ -70,17 +83,21 @@ ion-row {
   width: 100%;
   border: 1px solid lightgrey;
 }
+
 .no-padding {
   color: white;
   padding: 0px;
   margin-left: 14px;
   font-size: 10px;
 }
+
 .wrap {
   padding-top: 20px;
   margin-left: -10px;
   margin-right: -10px;
 }
+
 .input-wrapper {
   margin-left: 80 px;
 }
+/*# sourceMappingURL=login.page.css.map */

@@ -1,14 +1,14 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button text="Log in" icon="chevron-back-outline">
+      <ion-back-button text="Log In" icon="chevron-back-outline">
       </ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="content">
-  <ion-grid class="ion-padding">
+  <ion-grid class="ion-no-padding">
     <ion-row style="height: 10px;"></ion-row>
     <ion-row class="no-padding">
       Hello there!
@@ -19,9 +19,9 @@
     <ion-row class="wrap">
       <ion-card class="ion-padding">
         <form [formGroup]="Login" class="form">
-          <ion-grid>
+          <ion-grid style="margin-left: 7px;">
             <ion-row style="height: 40px;"></ion-row>
-            <ion-row>
+            <ion-row style="margin-right: -10px;">
               <div class="input">
                 <ion-grid>
                   <ion-row>
@@ -37,7 +37,7 @@
                 </ion-grid>
               </div>
             </ion-row>
-            <ion-row
+            <ion-row style="margin-top: 6px; margin-left: -4px;"
               ><div>
                 <ng-container *ngFor="let error of error_message.email">
                   <div
@@ -51,7 +51,7 @@
               </div></ion-row
             >
             <ion-row style="height: 40px;"></ion-row>
-            <ion-row>
+            <ion-row style="margin-right: -10px;">
               <div class="input">
                 <ion-grid>
                   <ion-row>
@@ -62,13 +62,13 @@
                       <ion-input
                         formControlName="password"
                         [type]="showPassword ? 'text' :'password'"
-                        class="adj_input_p"
+                        class="adj_input_l"
                         placeholder="Password"
                       ></ion-input>
                     </ion-col>
                     <ion-col
                       size="1"
-                      style="text-align: end; vertical-align: middle;"
+                      style="margin-top: 1vh; text-align: center;"
                       ><ion-icon
                         class="eye"
                         [name]="passwordToggleIcon"
@@ -76,7 +76,7 @@
                       ></ion-icon
                     ></ion-col>
                   </ion-row>
-                  <ion-row>
+                  <ion-row style="margin-top: 8px;">
                     <ion-col class="forget">
                       <div>
                         <ng-container
@@ -94,14 +94,8 @@
                         </ng-container>
                       </div></ion-col
                     >
-                    <ion-col
-                      size="5"
-                      style="font-size: 11px; text-align: end; color: #e69600;"
-                    >
-                      Forget Password?
-                    </ion-col>
                   </ion-row>
-                  <ion-row style="height: 30px;"></ion-row>
+                  <ion-row style="height: 55px;"></ion-row>
                   <ion-row
                     ><ion-col size="12"
                       ><ion-button
@@ -114,14 +108,6 @@
                     ></ion-row
                   >
                   <ion-row style="height: 200px;"></ion-row>
-                  <ion-row>
-                    <ion-col
-                      class="ion-no-padding"
-                      size="8"
-                      style="font-size: 15px; text-align: right;"
-                      >Don't have an account?</ion-col
-                    ><a> Register</a></ion-row
-                  >
                 </ion-grid>
               </div>
             </ion-row>
