@@ -11,17 +11,6 @@ import { AppRoutingModule } from "./app-routing.module";
 
 import { SuperTabsModule } from "@ionic-super-tabs/angular";
 import { HttpClientModule } from "@angular/common/http";
-import { Storage, IonicStorageModule } from "@ionic/storage";
-import { JwtModule, JWT_OPTIONS } from "@auth0/angular-jwt";
-
-export function jwtOptionsFactory(storage) {
-  return {
-    tokenGetter: () => {
-      return storage.get("access_token");
-    },
-    whitelistedDomains: [""],
-  };
-}
 
 @NgModule({
   declarations: [AppComponent],
@@ -32,14 +21,6 @@ export function jwtOptionsFactory(storage) {
     AppRoutingModule,
     SuperTabsModule.forRoot(),
     HttpClientModule,
-    IonicStorageModule.forRoot(),
-    JwtModule.forRoot({
-      jwtOptionsProvider: {
-        provide: JWT_OPTIONS,
-        useFactory: jwtOptionsFactory,
-        deps: [Storage],
-      },
-    }),
   ],
   providers: [
     StatusBar,

@@ -1,4 +1,3 @@
-import { AuthService } from "./../services/auth.service";
 import { RouterModule } from "@angular/router";
 import { Component, OnInit } from "@angular/core";
 import {
@@ -45,7 +44,7 @@ export class LoginPage implements OnInit {
   };
   constructor(
     public nav: NavController,
-    private authService: AuthService,
+
     private router: Router
   ) {
     this.Login = new FormGroup({
@@ -63,9 +62,6 @@ export class LoginPage implements OnInit {
     });
   }
 
-  /*onSubmit() {
-    is.thauthService.login(this.Login.value).subscribe();
-  }*/
   onSubmit() {
     this.router.navigateByUrl("/tabnav");
   }
