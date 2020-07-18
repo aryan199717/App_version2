@@ -35,6 +35,13 @@ const routes: Routes = [
         loadChildren: () =>
           import("../account/account.module").then((m) => m.AccountPageModule),
       },
+      {
+        path: "recognition",
+        loadChildren: () =>
+          import("../recognition/recognition.module").then(
+            (m) => m.RecognitionPageModule
+          ),
+      },
     ],
   },
 ];

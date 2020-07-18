@@ -6,6 +6,8 @@
   --max-width: 100px;
 }
 :root {
+  --ion-background: black;
+
   /** primary **/
   --ion-color-primary: #e69600;
   --ion-color-primary-rgb: 56, 128, 255;
@@ -56,11 +58,15 @@
 
   /** dark **/
   --ion-color-dark: #000000;
-  --ion-color-dark-rgb: 34, 36, 40;
+  --ion-color-dark-rgb: 0, 0, 0;
   --ion-color-dark-contrast: #e69600;
   --ion-color-dark-contrast-rgb: 255, 255, 255;
   --ion-color-dark-shade: #1e2023;
   --ion-color-dark-tint: #383a3e;
+
+  /** background **/
+  --ion-color-background: #000000;
+  --ion-color-background-rgb: 0, 0, 0;
 
   /** medium **/
   --ion-color-medium: #92949c;

@@ -1,3 +1,4 @@
+import { RecognitionPageModule } from "./../recognition/recognition.module";
 import { TabnavPopoverComponent } from "./../tabnav-popover/tabnav-popover.component";
 import { AccountPageModule } from "./../account/account.module";
 import { SupportPageModule } from "./../support/support.module";
@@ -33,6 +34,7 @@ import { RouterModule } from "@angular/router";
     TeamsPageModule,
     SupportPageModule,
     AccountPageModule,
+    RecognitionPageModule,
   ],
   entryComponents: [TabnavPopoverComponent],
   declarations: [TabnavPage, TabnavPopoverComponent],

@@ -1,4 +1,4 @@
-<ion-header no-border>
+<ion-header class="ion-no-border">
   <ion-toolbar color="dark">
     <ion-grid fixed>
       <ion-row>
@@ -56,7 +56,7 @@
 -->
 
 <super-tabs>
-  <super-tabs-container>
+  <super-tabs-container swipe-enabled="false">
     <super-tab>
       <ion-content>
         <ion-nav [root]="dashboardPage"></ion-nav>
@@ -74,11 +74,16 @@
     </super-tab>
     <super-tab>
       <ion-content>
+        <ion-nav [root]="recognitionPage"></ion-nav>
+      </ion-content>
+    </super-tab>
+    <super-tab>
+      <ion-content>
         <ion-nav [root]="accountPage"></ion-nav>
       </ion-content>
     </super-tab>
   </super-tabs-container>
-  <super-tabs-toolbar slot="bottom">
+  <super-tabs-toolbar slot="bottom" class="ion-padding-horizontal">
     <super-tab-button>
       <ion-icon name="home"></ion-icon>
       <ion-label>Home</ion-label>
@@ -90,6 +95,10 @@
     <super-tab-button>
       <ion-icon name="chatbubbles"></ion-icon>
       <ion-label>Support</ion-label>
+    </super-tab-button>
+    <super-tab-button>
+      <ion-icon name="medal"></ion-icon>
+      <ion-label>Recognition</ion-label>
     </super-tab-button>
     <super-tab-button>
       <ion-icon name="person-circle"></ion-icon>

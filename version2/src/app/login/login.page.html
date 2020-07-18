@@ -18,7 +18,7 @@
     </ion-row>
     <ion-row class="wrap">
       <ion-card class="ion-padding" class="ion-margin-start">
-        <form [formGroup]="Login" class="form">
+        <form [formGroup]="Login" class="form" (ngSubmit)="onSubmit()">
           <ion-grid class="ion-padding-start">
             <ion-row style="height: 40px;"></ion-row>
             <ion-row>
@@ -105,8 +105,8 @@
                   <ion-row
                     ><ion-col size="12"
                       ><ion-button
-                        (click)="btnclicked()"
-                        size="large"
+                        (click)="onSubmit()"
+                        type="submit"
                         expand="full"
                         shape="round"
                         class="logbtn"

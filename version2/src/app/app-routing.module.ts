@@ -1,3 +1,4 @@
+import { AuthGuardService } from "./services/auth-guard.service";
 import { NgModule } from "@angular/core";
 import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
 
@@ -46,6 +47,13 @@ const routes: Routes = [
     path: "account",
     loadChildren: () =>
       import("./account/account.module").then((m) => m.AccountPageModule),
+  },
+  {
+    path: "recognition",
+    loadChildren: () =>
+      import("./recognition/recognition.module").then(
+        (m) => m.RecognitionPageModule
+      ),
   },
 ];
 

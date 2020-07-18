@@ -38,6 +38,10 @@ ion-icon {
   --st-base-color-inactive: white;
 }
 ion-label {
-  font-size: 12px;
-  font-style: inherit;
+  --st-label-font-size: 12px;
+  --st-label-text-transform: Capitalize;
+}
+.ion-padding-horizontal {
+  padding-left: 10px;
+  padding-right: 10px;
 }

@@ -5,6 +5,7 @@ import { SupportPage } from "./../support/support.page";
 import { TeamsPage } from "./../teams/teams.page";
 import { DashboardPage } from "./../dashboard/dashboard.page";
 import { Component, OnInit } from "@angular/core";
+import { RecognitionPage } from "../recognition/recognition.page";
 
 @Component({
   selector: "app-tabnav",
@@ -16,6 +17,7 @@ export class TabnavPage implements OnInit {
   teamsPage = TeamsPage;
   supportPage = SupportPage;
   accountPage = AccountPage;
+  recognitionPage = RecognitionPage;
 
   DEFAULT_CONFIG: {
     dragThreshold: 200;

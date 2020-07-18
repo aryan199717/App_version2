@@ -1,22 +1,24 @@
-import { RouterModule } from '@angular/router';
-import { Component } from '@angular/core';
+import { AuthService } from "./services/auth.service";
+import { RouterModule } from "@angular/router";
+import { Component } from "@angular/core";
 
-import { Platform } from '@ionic/angular';
-import { SplashScreen } from '@ionic-native/splash-screen/ngx';
-import { StatusBar } from '@ionic-native/status-bar/ngx';
-import { Router } from '@angular/router'
+import { Platform } from "@ionic/angular";
+import { SplashScreen } from "@ionic-native/splash-screen/ngx";
+import { StatusBar } from "@ionic-native/status-bar/ngx";
+import { Router } from "@angular/router";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: 'app.component.html',
-  styleUrls: ['app.component.scss']
+  selector: "app-root",
+  templateUrl: "app.component.html",
+  styleUrls: ["app.component.scss"],
 })
 export class AppComponent {
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    private router: Router
+    private router: Router,
+    private auth: AuthService
   ) {
     this.initializeApp();
   }
@@ -25,7 +27,14 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
-      this.router.navigateByUrl('intro');
+      //this.router.navigateByUrl("intro");
+      this.auth.authenticationState.subscribe((state) => {
+        if (state) {
+          this.router.navigate(["tabnav"]);
+        } else {
+          this.router.navigate(["intro"]);
+        }
+      });
     });
   }
 }
